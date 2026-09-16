@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Page Heading -->
+        <h1>Student Management System</h1>
+        <p class="subtitle">Manage student records easily</p>
+
+        <!-- Add Student Form -->
+        <div class="card">
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <!-- Hidden field for Edit -->
+                <input type="hidden" id="editIndex">
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="Enter course"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    Add Student
+                </button>
+
+            </form>
+        </div>
+
+        <!-- Student Records Section -->
+        <div class="card">
+
+            <div class="table-header">
+                <h2>Student Records</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search students..."
+                >
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        <!-- Student records will appear here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No student records found.</p>
+
+        </div>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
